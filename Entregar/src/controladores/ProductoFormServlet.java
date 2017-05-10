@@ -26,9 +26,30 @@ public class ProductoFormServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String op = request.getParameter("opform");
 		String nombre = request.getParameter("nombre");
-		int id = Integer.parseInt(request.getParameter("id"));
+		int id;
 		String descripcion = request.getParameter("descripcion");
-		double precio = Double.parseDouble(request.getParameter("precio"));
+		double precio;
+
+		if (request.getParameter("id") == null) {
+
+			id = 0;
+		} else if (request.getParameter("id") == "") {
+
+			id = 0;
+		} else {
+			id = Integer.parseInt(request.getParameter("id"));
+		}
+
+		if (request.getParameter("precio") == null) {
+
+			precio = 0;
+		} else if (request.getParameter("precio") == "") {
+
+			precio = 0;
+		} else {
+
+			precio = Double.parseDouble(request.getParameter("precio"));
+		}
 
 		RequestDispatcher rutaListado = request.getRequestDispatcher(ProductoCrudServlet.RUTA_SERVLET_LISTADO);
 		RequestDispatcher rutaFormulario = request.getRequestDispatcher(ProductoCrudServlet.RUTA_FORMULARIO);
@@ -52,7 +73,7 @@ public class ProductoFormServlet extends HttpServlet {
 
 		switch (op) {
 		case "alta":
-			if (dal.validar(producto)) {
+			if (!dal.validar(producto)) {
 				dal.alta(producto);
 				rutaListado.forward(request, response);
 			} else {

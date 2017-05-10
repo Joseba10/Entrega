@@ -2,11 +2,13 @@ package ProductosTipos;
 
 public class Producto {
 
+	String nombre, descripcion, errores;
+	int id;
+	double precio;
+
 	public Producto() {
 		super();
 	}
-
-	String nombre, descripcion, errores;
 
 	public String getErrores() {
 		return errores;
@@ -15,9 +17,6 @@ public class Producto {
 	public void setErrores(String errores) {
 		this.errores = errores;
 	}
-
-	int id;
-	double precio;
 
 	public Producto(int id, String nombre, String descripcion, double precio) {
 		super();
@@ -78,8 +77,8 @@ public class Producto {
 		this.descripcion = descripcion;
 	}
 
-	public String getPrecio() {
-		return descripcion;
+	public double getPrecio() {
+		return precio;
 	}
 
 	public void setPrecio(double precio) {

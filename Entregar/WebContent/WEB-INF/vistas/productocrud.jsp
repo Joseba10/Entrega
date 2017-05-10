@@ -31,7 +31,7 @@
 		<td>${producto.nombre}</td>
 		<td>${producto.descripcion}</td>
 		<td>${producto.precio}</td>
-		
+	
 	</tr>
 	</c:forEach>
 			
@@ -42,6 +42,7 @@
 
 
 </table>
+
 
 <a href="productocrud?op=alta">Alta</a>
 

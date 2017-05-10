@@ -9,7 +9,7 @@
  class="ProductosTipos.Producto" />
  
  	
-	<form action="productoform" method="post">
+	
 		
 <style>
  	
@@ -63,6 +63,8 @@ width: 200px;
 
 </style>
 
+<form action="productoform" method="post">
+
 <ul>
  	
  		<li><a href="#">Alta</a></li>
@@ -70,8 +72,7 @@ width: 200px;
 		<fieldset>
 
 			<label for="id">Id</label> 
-			<input id="id" name="id"
-			 required minlength="4" value="${producto.id}"
+			<input id="id" name="id" required="required" value="${producto.id}"
 			 
 			<c:if test="${param.op=='modificar' or param.op == 'borrar'}">
 			
@@ -95,7 +96,7 @@ readonly="readonly"
 		<fieldset>
 
 			<label for="precio">Precio</label>
-			<input id="precio" name="precio" type="text">
+			<input id="precio" name="precio" >
 
 		</fieldset>
 		<fieldset>

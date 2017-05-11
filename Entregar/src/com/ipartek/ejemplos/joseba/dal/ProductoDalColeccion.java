@@ -9,6 +9,7 @@ import ProductosTipos.Producto;
 public class ProductoDalColeccion implements ProductoDAL {
 
 	private Map<Integer, Producto> productos = new TreeMap<Integer, Producto>();
+	public static int siguienteId = 0;
 
 	@Override
 	public void alta(Producto producto) {
@@ -16,6 +17,7 @@ public class ProductoDalColeccion implements ProductoDAL {
 			throw new ProductoYaExisteDALException("Ya existe el producto " + producto.getId());
 
 		productos.put(producto.getId(), producto);
+		siguienteId++;
 
 	}
 

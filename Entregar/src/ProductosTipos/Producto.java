@@ -1,5 +1,7 @@
 package ProductosTipos;
 
+import com.ipartek.ejemplos.joseba.dal.ProductoDalColeccion;
+
 public class Producto {
 
 	String nombre, descripcion, errores;
@@ -8,6 +10,7 @@ public class Producto {
 
 	public Producto() {
 		super();
+		this.id = ProductoDalColeccion.siguienteId;
 	}
 
 	public String getErrores() {
@@ -18,12 +21,12 @@ public class Producto {
 		this.errores = errores;
 	}
 
-	public Producto(int id, String nombre, String descripcion, double precio) {
+	public Producto(String nombre, String descripcion, double precio) {
 		super();
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.precio = precio;
-		this.id = id;
+		this.id = ProductoDalColeccion.siguienteId;
 	}
 
 	@Override

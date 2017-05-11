@@ -15,7 +15,7 @@
  	
 ul{
 
-margin-left: 0px;
+margin-left: 370px;
 margin-top: 0px;
 
 }
@@ -48,13 +48,25 @@ border: none;}
 form{
 
 
-margin-left: 530px;
+margin-left: 560px;
 margin-top: 50px;}
 
 .errores{
 
 margin-top:20px;
 width: 200px;
+}
+
+input:FOCUS{
+
+padding:10px;
+
+}
+
+
+input:hover{
+
+font-weight: bold;
 }
 
 
@@ -67,7 +79,7 @@ width: 200px;
 
 <ul>
  	
- 		<li><a href="#">Alta</a></li>
+ 		
  	</ul>
 		<fieldset>
 
@@ -84,19 +96,19 @@ readonly="readonly"
 <fieldset>
 
 			<label for="nombre">Nombre</label>
-			<input id="nombre" name="nombre" type="text">
+			<input id="nombre" name="nombre" type="text" value="${producto.nombre}">
 
 		</fieldset>
 		<fieldset>
 
 			<label for="descripcion">Descripcion</label>
-			<input id="descripcion" name="descripcion" type="text">
+			<input id="descripcion" name="descripcion" type="text" value="${producto.descripcion}">
 
 		</fieldset>
 		<fieldset>
 
 			<label for="precio">Precio</label>
-			<input id="precio" name="precio" >
+			<input id="precio" name="precio" value="${producto.precio}">
 
 		</fieldset>
 		<fieldset>

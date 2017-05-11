@@ -66,8 +66,8 @@ public class ProductoFormServlet extends HttpServlet {
 			return;
 		}
 
-		Producto producto = new Producto(id, nombre, descripcion, precio);
-
+		Producto producto = new Producto(nombre, descripcion, precio);
+		producto.setId(id);
 		ServletContext application = request.getServletContext();
 		ProductoDAL dal = (ProductoDAL) application.getAttribute("dal");
 

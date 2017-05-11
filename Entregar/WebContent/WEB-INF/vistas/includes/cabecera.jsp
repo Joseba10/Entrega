@@ -11,7 +11,47 @@
 	h1,p{
 	text-align: center;
 }
-	
+*{
+margin: 0px;
+}
+
+header h1{
+
+border:solid 2px;
+background-color: yellow;
+}	
+
+nav ul li a:hover{
+
+
+color:blue;
+
+}
+
+nav ul li:hover{
+
+background-color: yellow;}
+
+nav ul li a{
+
+color:red;
+font-weight: bold;
+
+
+}
+
+nav ul li{
+margin-left: 50px;
+width:200px;
+}
+
+
+nav ul {
+
+margin-top: 30px;
+
+
+}
 	
 	</style>
 	<meta charset="UTF-8">
@@ -24,8 +64,8 @@
 
 	<header>
 		
-		<h1>Ejemplo MVC</h1>
-		<p>Ejemplos de uso de MVC con diferentes tecnicas</p>
+		<h1>Tienda Virtual</h1><br>
+
 	</header>
 	
 	<nav>

@@ -1,7 +1,8 @@
 <%@  include file="includes/cabecera.jsp" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <style>
 
 
@@ -110,7 +111,7 @@ text-decoration: none;}
 		<td>${producto.id }</td>
 		<td>${producto.nombre}</td>
 		<td>${producto.descripcion}</td>
-		<td>${producto.precio}</td>
+		<td>${producto.precio} €</td>
 	
 	</tr>
 	</c:forEach>

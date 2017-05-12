@@ -111,9 +111,33 @@ readonly="readonly"
 			<input id="precio" name="precio" value="${producto.precio}">
 
 		</fieldset>
+		
+			<fieldset>
+
+			<label for="imagen">Imagen</label>
+			
+			<select name="imagen">
+			
+			<option value="0">Manzana</option> 
+			<option value="1">Tomate</option> 
+			<option value="2">Patata</option> 
+			<option value="3">Mandarina</option> 
+			<option value="4">Naranja</option> 
+			<option value="5">Pera</option> 
+			<option value="6">Vino</option> 
+			
+			</select>
+
+		</fieldset>
 		<fieldset>
 
-			<input type="submit" value="${fn:toUpperCase(param.op) }">
+			<input type="submit" value="${fn:toUpperCase(param.op) }"
+			
+			<c:if test="${param.op==null or param.op=='' }">
+			style="display:none"
+			</c:if>
+			
+			>
 			<p class="errores">${producto.errores }</p>
 			
 			<input type="hidden" name="opform" value="${param.op }">

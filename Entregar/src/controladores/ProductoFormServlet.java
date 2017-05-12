@@ -29,6 +29,18 @@ public class ProductoFormServlet extends HttpServlet {
 		int id;
 		String descripcion = request.getParameter("descripcion");
 		double precio;
+		int imagen;
+
+		if (request.getParameter("imagen") == null) {
+
+			imagen = 0;
+		} else if (request.getParameter("imagen") == "") {
+
+			imagen = 0;
+		} else {
+
+			imagen = Integer.parseInt(request.getParameter("imagen"));
+		}
 
 		if (request.getParameter("id") == null) {
 
@@ -66,7 +78,7 @@ public class ProductoFormServlet extends HttpServlet {
 			return;
 		}
 
-		Producto producto = new Producto(nombre, descripcion, precio);
+		Producto producto = new Producto(nombre, descripcion, precio, imagen);
 		producto.setId(id);
 		ServletContext application = request.getServletContext();
 		ProductoDAL dal = (ProductoDAL) application.getAttribute("dal");

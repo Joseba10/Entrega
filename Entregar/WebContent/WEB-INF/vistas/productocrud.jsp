@@ -84,7 +84,7 @@ text-decoration: none;}
 
 
 </style>
-<h2>Mantenimiento de usuarios</h2>
+<h2>Mantenimiento de Productos</h2>
 
 <table border=1 width="700" height=150px;>
 
@@ -94,9 +94,10 @@ text-decoration: none;}
 
 	<th>Operaciones</th>
 	<th>ID</th>
-	<th>Usuario</th>
+	<th>Producto</th>
 	<th>Descripcion</th>
 	<th>Precio</th>
+	<th>Imagen</th>
 	
 	</tr>
 	
@@ -112,6 +113,7 @@ text-decoration: none;}
 		<td>${producto.nombre}</td>
 		<td>${producto.descripcion}</td>
 		<td>${producto.precio} €</td>
+		<td><img src="${producto.imagen}.jpg" width="80px"></td>
 	
 	</tr>
 	</c:forEach>

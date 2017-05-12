@@ -38,8 +38,8 @@ public class ProductoCrudServlet extends HttpServlet {
 		if (dal == null) {
 			dal = DalFactory.getProductoDAL();
 
-			dal.alta(new Producto("Manzana", "Manzana de Asturias", 1.2));
-			dal.alta(new Producto("Tomate", "Tomates de Jaen", 2.2));
+			dal.alta(new Producto("Manzana", "Manzana de Asturias", 1.2, 0));
+			dal.alta(new Producto("Tomate", "Tomates de Jaen", 2.2, 1));
 			application.setAttribute("dal", dal);
 		}
 

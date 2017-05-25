@@ -1,6 +1,6 @@
 package com.ipartek.ejemplos.joseba.dal;
 
-public class DalFactory {
+public class ProductoDalFactory {
 
 	public static ProductoDAL getProductoDAL() {
 		// return new UsuarioDalUsuarioUnico();

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import ProductosTipos.Producto;
 
-import com.ipartek.ejemplos.joseba.dal.DALException;
+import com.ipartek.ejemplos.joseba.dal.ProductoDALException;
 import com.ipartek.ejemplos.joseba.dal.ProductoDAL;
 
 @WebServlet("/productoform")
@@ -99,7 +99,7 @@ public class ProductoFormServlet extends HttpServlet {
 
 			try {
 				dal.modificar(producto);
-			} catch (DALException de) {
+			} catch (ProductoDALException de) {
 				producto.setErrores(de.getMessage());
 				request.setAttribute("producto", producto);
 				rutaFormulario.forward(request, response);

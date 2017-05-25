@@ -24,7 +24,7 @@ public class ProductoDalColeccion implements ProductoDAL {
 	@Override
 	public void modificar(Producto producto) {
 		if (!productos.containsKey(producto.getId()))
-			throw new DALException("Intento de modificar usuario no existente " + producto);
+			throw new ProductoDALException("Intento de modificar usuario no existente " + producto);
 
 		productos.put(producto.getId(), producto);
 

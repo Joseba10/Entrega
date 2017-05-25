@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import ProductosTipos.Producto;
 
-import com.ipartek.ejemplos.joseba.dal.DalFactory;
+import com.ipartek.ejemplos.joseba.dal.ProductoDalFactory;
 import com.ipartek.ejemplos.joseba.dal.ProductoDAL;
 
 @WebServlet("/productocrud")
@@ -36,7 +36,7 @@ public class ProductoCrudServlet extends HttpServlet {
 																		// mismo si entras
 																		// de nuevo
 		if (dal == null) {
-			dal = DalFactory.getProductoDAL();
+			dal = ProductoDalFactory.getProductoDAL();
 
 			dal.alta(new Producto("Manzana", "Manzana de Asturias", 1.2, 0));
 			dal.alta(new Producto("Tomate", "Tomates de Jaen", 2.2, 1));

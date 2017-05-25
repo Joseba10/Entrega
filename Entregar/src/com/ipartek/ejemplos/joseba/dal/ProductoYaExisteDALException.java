@@ -1,6 +1,6 @@
 package com.ipartek.ejemplos.joseba.dal;
 
-public class ProductoYaExisteDALException extends DALException {
+public class ProductoYaExisteDALException extends ProductoDALException {
 
 	private static final long serialVersionUID = 1L;
 
